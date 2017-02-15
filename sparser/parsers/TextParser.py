@@ -1,4 +1,0 @@
-
-
-def getfileText(url):
-    pass
