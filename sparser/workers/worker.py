@@ -1,9 +1,7 @@
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
- 
- 
- 
-def processURL(baseurl):
+
+def processGoogleURL(baseurl):
    
     # list to store and return unique URLs scraped from the site
     urllst = []
@@ -39,15 +37,10 @@ def processURL(baseurl):
     # get unique urls by using set() command
     urllst = set(urllst)
    
-    # get a list of unique urls back by using list() command
-    urllst = list(urllst)
-   
-    # for testing
-    print(len(urllst))
-   
-    # return urlsst
-    return(urllst)
+    # get a list of unique urls back by using list() command and return the list
+    return list(urllst)
+
                
 if __name__ == "__main__":
-    urllst = processURL("http://news.google.com")
-    print(len(urllst))
+    urllst = processGoogleURL("http://news.google.com")
+    print(urllst)
